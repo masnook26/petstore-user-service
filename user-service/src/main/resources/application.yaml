@@ -1,3 +1,18 @@
+server:
+  port: 8080
+
 spring:
   application:
     name: user-service
+
+  elasticsearch:
+    uris: http://elasticsearch:9200
+#    username: ${ELASTIC_USER:elastic}
+#    password: ${ELASTIC_PASS:elastic}
+    connection-timeout: 5s
+    socket-timeout: 30s
+
+  data:
+    elasticsearch:
+      repositories:
+        enabled: true

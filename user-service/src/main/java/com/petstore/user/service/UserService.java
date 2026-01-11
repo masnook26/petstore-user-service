@@ -10,12 +10,6 @@ import com.petstore.user.model.User;
  */
 public interface UserService {
 
-  User createUser(User user);
-
   User getUserByName(String username);
-
-  User updateUser(String username, User user);
-
-  void deleteUser(String username);
 
 }
