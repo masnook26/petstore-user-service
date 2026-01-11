@@ -1,7 +1,8 @@
 package com.petstore.user.dto;
 
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.Builder;
 
 /**
@@ -12,19 +13,23 @@ import lombok.Builder;
  */
 @Builder
 public record UserRequest(
-  @NotNull
+
+  @NotBlank(message = "")
+  @Size(max = 50, message = "")
   String username,
 
+  @Size(max = 100, message = "")
   String firstName,
 
+  @Size(max = 100, message = "")
   String lastName,
 
-  @Email
-  @NotNull
+  @NotBlank(message = "")
+  @Email(message = "")
+  @Size(max = 150, message = "")
   String email,
 
-  String phoneNumber,
-
-  Integer userStatus
+  @Size(max = 15, message = "")
+  String phoneNumber
 ) {
 }
