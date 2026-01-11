@@ -2,10 +2,14 @@ package com.petstore.user.controller;
 
 import com.petstore.user.model.User;
 import com.petstore.user.service.UserService;
+import lombok.RequiredArgsConstructor;
 import org.jspecify.annotations.NonNull;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * user-service
@@ -15,36 +19,15 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/user")
+@RequiredArgsConstructor
 public class UserController {
 
   private final UserService userService;
 
-  public UserController(UserService userService) {
-    this.userService = userService;
-  }
-
-  @PostMapping
-  public ResponseEntity<@NonNull User> createUser(@RequestBody User user) {
-    userService.createUser(user);
-    return ResponseEntity.status(HttpStatus.CREATED).body(null);
-  }
-
   @GetMapping("/{username}")
   public ResponseEntity<@NonNull User> getUserByName(@PathVariable String username) {
-    userService.getUserByName(username);
-    return ResponseEntity.status(HttpStatus.OK).body(null);
-  }
-
-  @PutMapping("/{username}")
-  public ResponseEntity<@NonNull User> updateUser(@PathVariable String username, @RequestBody User user) {
-    userService.updateUser(username, user);
-    return ResponseEntity.status(HttpStatus.OK).body(null);
-  }
-
-  @PutMapping("/{username}")
-  public ResponseEntity<@NonNull Void> deleteUser(@PathVariable String username) {
-    userService.deleteUser(username);
-    return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    User user = userService.getUserByName(username);
+    return ResponseEntity.status(HttpStatus.OK).body(user);
   }
 
 }
