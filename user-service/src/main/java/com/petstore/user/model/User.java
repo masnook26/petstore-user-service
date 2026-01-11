@@ -13,7 +13,14 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "users")
+@Table(
+  name = "users",
+  indexes = {
+    @Index(name = "idx_users_username", columnList = "username"),
+    @Index(name = "idx_users_email", columnList = "email"),
+    @Index(name = "idx_users_user_status", columnList = "user_status")
+  }
+)
 public class User {
 
   @Id

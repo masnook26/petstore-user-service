@@ -1,7 +1,7 @@
 package com.petstore.user.service;
 
+import com.petstore.user.dto.UserRequest;
 import com.petstore.user.dto.UserResponse;
-import com.petstore.user.model.User;
 
 /**
  * user-service
@@ -12,5 +12,7 @@ import com.petstore.user.model.User;
 public interface UserService {
 
   UserResponse findByUsername(String username);
+
+  UserResponse createUser(UserRequest request);
 
 }
