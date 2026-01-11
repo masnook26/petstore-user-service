@@ -5,14 +5,29 @@ spring:
   application:
     name: user-service
 
-  elasticsearch:
-    uris: http://elasticsearch:9200
-#    username: ${ELASTIC_USER:elastic}
-#    password: ${ELASTIC_PASS:elastic}
-    connection-timeout: 5s
-    socket-timeout: 30s
+  datasource:
+    url: jdbc:h2:mem:userdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
 
-  data:
-    elasticsearch:
-      repositories:
-        enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+logging:
+  level:
+    root: info
+    web: info
+    sql: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
