@@ -1,5 +1,6 @@
 package com.petstore.user.service;
 
+import com.petstore.user.dto.UserResponse;
 import com.petstore.user.model.User;
 
 /**
@@ -10,6 +11,6 @@ import com.petstore.user.model.User;
  */
 public interface UserService {
 
-  User getUserByName(String username);
+  UserResponse findByUsername(String username);
 
 }

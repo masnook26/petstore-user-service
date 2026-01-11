@@ -1,5 +1,7 @@
 package com.petstore.user.dto;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
 
 /**
@@ -10,11 +12,19 @@ import lombok.Builder;
  */
 @Builder
 public record UserRequest(
+  @NotNull
   String username,
+
   String firstName,
+
   String lastName,
+
+  @Email
+  @NotNull
   String email,
+
   String phoneNumber,
+
   Integer userStatus
 ) {
 }

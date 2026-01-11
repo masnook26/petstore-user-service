@@ -1,6 +1,6 @@
 package com.petstore.user.controller;
 
-import com.petstore.user.model.User;
+import com.petstore.user.dto.UserResponse;
 import com.petstore.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.jspecify.annotations.NonNull;
@@ -25,9 +25,9 @@ public class UserController {
   private final UserService userService;
 
   @GetMapping("/{username}")
-  public ResponseEntity<@NonNull User> getUserByName(@PathVariable String username) {
-    User user = userService.getUserByName(username);
-    return ResponseEntity.status(HttpStatus.OK).body(user);
+  public ResponseEntity<@NonNull UserResponse> getUserByName(@PathVariable String username) {
+    UserResponse response = userService.findByUsername(username);
+    return ResponseEntity.status(HttpStatus.OK).body(response);
   }
 
 }
